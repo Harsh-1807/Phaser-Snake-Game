@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game 🐍</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2;
+            overflow: hidden;
+            text-align: center;
+            background-color: #333;
+        }
+        #game-container {
+            position: center;
+            width: 40vw;
+            height: 10vh;
+            margin: 0 auto;
+        }
+        #score, #start-button, #restart-button {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            color: #fff;
+            z-index: 1;
+        }
+        #start-button, #restart-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: #fff;
+            display: none;
+        }
+        #start-button:hover, #restart-button:hover {
+            background-color: #777;
+        }
+        #score {
+            font-size: 24px;
+        }
+        #restart-button {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="score">Score: 0</div>
+        <button id="start-button">Start Game</button>
+        <button id="restart-button">Restart Game</button>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
